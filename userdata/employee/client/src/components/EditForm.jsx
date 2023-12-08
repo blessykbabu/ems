@@ -1,60 +1,5 @@
-// // EditForm.js
-// import React from 'react';
-// import { useFormik } from 'formik';
-// import * as Yup from 'yup';
 
-// const EditForm = ({ initialValues, onSubmit }) => {
-//   const formik = useFormik({
-//     initialValues,
-//     validationSchema: Yup.object({
-//       // Define your validation schema here
-//       name: Yup.string().required('Name is required'),
-//       email: Yup.string().email('Invalid email address').required('Email is required'),
-//       // Add more fields as needed
-//     }),
-//     onSubmit: values => {
-//       onSubmit(values);
-//     },
-//   });
-// console.log()
-//   return (
-//    <form onSubmit={formik.handleSubmit}>
-//       <label htmlFor="name">Name</label>
-//       <input
-//         id="name"
-//         name="name"
-//         type="text"
-//         onChange={formik.handleChange}
-//         onBlur={formik.handleBlur}
-//         value={formik.values.name}
-//       />
-//       {formik.touched.name && formik.errors.name && (
-//         <div>{formik.errors.name}</div>
-//       )}
 
-//       <label htmlFor="email">Email</label>
-//       <input
-//         id="email"
-//         name="email"
-//         type="email"
-//         onChange={formik.handleChange}
-//         onBlur={formik.handleBlur}
-//         value={formik.values.email}
-//       />
-//       {formik.touched.email && formik.errors.email && (
-//         <div>{formik.errors.email}</div>
-//       )}
-
-//       {/* Add more fields as needed */}
-
-//       <button type="submit">Submit</button>
-//     </form>
-//   );
-// };
-
-// export default EditForm;
-
-// EditForm.js
 import React from "react";
 import { useFormik } from "formik";
 import {Link} from "react-router-dom"
@@ -64,12 +9,7 @@ export function EditForm({ initialValues, onSubmit,onClick }) {
   const formik = useFormik({
     initialValues,
     validationSchema: Yup.object({
-      // Define your validation schema here
-      // name: Yup.string().required("Name is required"),
-      // email: Yup.string()
-      //   .email("Invalid email address")
-      //   .required("Email is required"),
-      // Add more fields as needed
+     
 
 
       name: Yup.string()

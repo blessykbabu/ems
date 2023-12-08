@@ -184,7 +184,7 @@
 
 
 
-// EditPage.js
+
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { EditForm } from './editForm';
@@ -204,12 +204,11 @@ const EmployeeComponent = () => {
     jdate: "",
     exp: "",
     cemail: "",
-    // Add more fields as needed
+    
   });
 
   useEffect(() => {
-    // Fetch data for editing (e.g., from an API) and set it as initialData
-    // Example: fetch('/api/user/123').then(response => response.json()).then(data => setInitialData(data));
+    
  
     axios.get(`http://localhost:3000/api/get-employee/${id}`)
           .then((response) => {
